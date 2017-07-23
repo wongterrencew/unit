@@ -1,11 +1,28 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { unit } from './variables'
 
 const Spacer = styled.div`
-  margin-top: ${props => props.top * unit}px;
-  margin-right: ${props => props.right * unit}px;
-  margin-left: ${props => props.left * unit}px;
-  margin-bottom: ${props => props.bottom * unit}px;
+  ${props =>
+    props.inline &&
+    css`
+    display: inline-block;
+  `} ${props =>
+      props.top &&
+      css`
+    margin-top: ${props.top * unit}px;
+  `} ${props =>
+      props.right &&
+      css`
+    margin-right: ${props.right * unit}px;
+  `} ${props =>
+      props.left &&
+      css`
+    margin-left: ${props.left * unit}px;
+  `} ${props =>
+      props.bottom &&
+      css`
+    margin-bottom: ${props.bottom * unit}px;
+  `};
 `
 
 export default Spacer
