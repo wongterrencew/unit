@@ -6,6 +6,8 @@ const Typography = styled.div`
   line-height: {3 * unit}px;
   font-family: ${defaultFontFamily};
   color: ${orange};
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 `
 
 export default Typography
