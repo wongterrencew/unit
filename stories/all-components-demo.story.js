@@ -6,7 +6,10 @@ import { withKnobs } from '@storybook/addon-knobs'
 import Typography from '../src/typography'
 import Text from '../src/text'
 import Button from '../src/button'
+import Input from '../src/input'
 import Spacer from '../src/spacer'
+
+const Flex = styled.div`display: flex;`
 
 const stories = storiesOf('All Components Demo', module)
 
@@ -30,6 +33,34 @@ stories.addDecorator(withKnobs).add('demo', () => {
           <Button primary>Primary button</Button>
         </Spacer>
         <Button>Button</Button>
+      </Spacer>
+      <Spacer bottom={2}>
+        <Flex>
+          <Spacer inline right={2}>
+            <Input
+              type='text'
+              label='input small'
+              size='small'
+              placeholder='128px'
+            />
+          </Spacer>
+          <Spacer inline right={2}>
+            <Input
+              type='text'
+              label='input medium'
+              size='medium'
+              placeholder='256px'
+            />
+          </Spacer>
+          <Spacer inline right={2}>
+            <Input
+              type='text'
+              label='input large'
+              size='large'
+              placeholder='384px'
+            />
+          </Spacer>
+        </Flex>
       </Spacer>
     </Typography>
   )
