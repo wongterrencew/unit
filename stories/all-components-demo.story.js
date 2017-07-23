@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import Typography from '../src/typography'
 import Text from '../src/text'
+import Button from '../src/button'
 import Spacer from '../src/spacer'
 
 const stories = storiesOf('All Components Demo', module)
@@ -23,6 +24,12 @@ stories.addDecorator(withKnobs).add('demo', () => {
       </Spacer>
       <Spacer bottom={2}>
         <Text size='size0'>14/24 - size0</Text>
+      </Spacer>
+      <Spacer bottom={2}>
+        <Spacer inline right={1}>
+          <Button primary>Primary button</Button>
+        </Spacer>
+        <Button>Button</Button>
       </Spacer>
     </Typography>
   )
